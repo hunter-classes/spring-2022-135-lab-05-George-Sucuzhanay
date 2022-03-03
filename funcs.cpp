@@ -16,7 +16,7 @@ bool isDivisibleBy(int n, int d)
 bool isPrime(int n)
 {
     bool isPrime2 = true;
-    if(n == 0 || n == 1)
+    if(n <= 1)
     {
         isPrime2 = false;
     }
@@ -33,6 +33,47 @@ bool isPrime(int n)
         }
     }
     return isPrime2;
-    
-    
 }
+
+int nextPrime(int n)
+{
+    // while(!isPrime(++n));
+    while(!isPrime(++n));
+    return n;
+}
+
+int countPrimes(int a, int b)
+{
+    int count = 0;
+    for(int i = a; i <= b;  i++)
+    {
+        if(isPrime(i) == true)
+        {
+            count++;
+        }      
+    }
+    return count;
+}
+bool isTwinPrime(int n)
+{
+    // if either N-2 or N+2 (or both of them) is also a prime
+
+    if(isPrime(n))
+    {
+        if (isPrime(n-2) || isPrime(n+2))
+        {
+            return true;
+        }
+    }
+    else{
+        return false;
+    }
+    return false;
+
+}
+int nextTwinPrime(int n)
+{
+    while(!isTwinPrime(++n));
+    return n;
+}
+

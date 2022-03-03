@@ -12,7 +12,11 @@ int main()
   std::cout << isPrime(3) << std::endl;
   std::cout << isPrime(4) << std::endl;
   std::cout << isPrime(5) << std::endl;
-
+  std::cout << "<----------------------->" << std::endl;
+  std::cout << countPrimes(8,13) << std::endl;
+  std::cout << "<----------------------->" << std::endl;
+  std::cout << isTwinPrime(8) << std::endl;
+  std::cout << nextTwinPrime(7) << std::endl;
 
   return 0;
 }
