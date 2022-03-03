@@ -54,6 +54,7 @@ int countPrimes(int a, int b)
     }
     return count;
 }
+
 bool isTwinPrime(int n)
 {
     // if either N-2 or N+2 (or both of them) is also a prime
@@ -71,9 +72,25 @@ bool isTwinPrime(int n)
     return false;
 
 }
+
 int nextTwinPrime(int n)
 {
     while(!isTwinPrime(++n));
     return n;
 }
+
+int largestTwinPrime(int a, int b)
+{
+    int bigTwinPrime = -1;
+    for(int i = b; i >= a; i--)
+    {
+        if(isTwinPrime(i))
+        {
+            bigTwinPrime = nextTwinPrime(i-1);
+            break;
+        }
+    }
+    return bigTwinPrime;
+}
+
 

@@ -17,6 +17,8 @@ int main()
   std::cout << "<----------------------->" << std::endl;
   std::cout << isTwinPrime(8) << std::endl;
   std::cout << nextTwinPrime(7) << std::endl;
+  std::cout << "<----------------------->" << std::endl;
+  std::cout << largestTwinPrime(5, 18) << std::endl;
 
   return 0;
 }
